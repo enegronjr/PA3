@@ -37,8 +37,8 @@ void Vegetable::calculateTax(ofstream& out){
   dailySalesTax += eachSalesTax;
 
   //prints formatted tax infromation to sale file
-  out << "\t\tSales Tax:" << setw(31) << right << setprecision(2)
-  << eachSalesTax << endl;
+  out << "\t\tSales Tax:" << setw(36) << right << setprecision(2)
+  << fixed << eachSalesTax << endl;
 }
 
 void Vegetable::calculateSale(ofstream& out){
@@ -52,8 +52,8 @@ void Vegetable::calculateSale(ofstream& out){
   vegtCount++;
 
   //prints formatted sales infromation to sales file
-  out << setw(50) << left << name << right << setprecision(2)
-  << eachSale << endl;
+  out << setw(46) << left << name << right << setprecision(2)
+  << fixed << eachSale << endl;
 }
 
 void Vegetable::printReceipt(ofstream& out){
@@ -69,7 +69,7 @@ void Vegetable::printReceipt(ofstream& out){
   calculateTax(out);
 
   //prints formatted total vegetable sale infromation to sales file
-  out << "\t\tTotal:" << setw(35) << right << setprecision(2) <<
+  out << "\t\tTotal:" << setw(40) << right << setprecision(2) << fixed <<
   eachSale + eachSalesTax << endl;
 
   out << "\n\n" << endl;
@@ -79,6 +79,6 @@ void Vegetable::printReceipt(ofstream& out){
 void Vegetable::printInfo(ofstream& out){
   //prints total vegetable infromation to end of sales file
   out << "Number of vegetable sales for the day: " << vegtCount << endl;
-  out << "With total vegetable sales of $" << setprecision(4) << totalVegtSales
-  << " for the day" << endl;
+  out << "With total vegetable sales of $" << setprecision(2) << fixed <<
+  totalVegtSales << " for the day" << endl;
 }

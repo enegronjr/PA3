@@ -55,7 +55,9 @@ class ProduceStand
    /*PARAMETERS: ifstream& ofstream&
     *constructor that reads in all the customer data
     */
-    ProduceStand(ifstream&, ofstream&);
+    ProduceStand(ifstream&, ofstream&, ofstream&);
+
+    ProduceStand(string, double, double, double, int);
 
    /*PARAMETERS: none
     *RETURN: string that represents the stand name

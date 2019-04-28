@@ -41,46 +41,9 @@ int main(int argc, const char* argv[]){
     cout << "Error opening file" << endl;
   }
 
-  //declaration of necessary variables
+  //create instance of prodice stand and reads in all data
   ProduceStand stand;
-  string temp;
-  Vegetable vegi;
-  Fruit fruit;
-
-  //while not eof
-  while((!in.eof())){
-    in >> temp;
-
-    //if its a fruit
-    if(temp == "Fruit"){
-      //read in fruit data
-      fruit = Fruit(in, out1);
-      //prints fruit
-      fruit.printReceipt(out1);
-    }
-    //if its a Vegetable
-    else if(temp == "Vegetable"){
-      //reads in Vegetable data
-      vegi = Vegetable(in, out1);
-      //prints Vegetable
-      vegi.printReceipt(out1);
-    }
-    //gets y or n
-    in >> temp;
-
-    //if customer wants to be added
-    if(temp == "y"){
-      //adds and prints customer
-      stand = ProduceStand(in, out2);
-    }
-  }
-
-  //prints total sales info
-  stand.printInfo(out1);
-  //prints total vegetable info
-  vegi.printInfo(out1);
-  //prints total fruit info
-  fruit.printInfo(out1);
+  stand = ProduceStand(in, out1, out2);
 
   //closes all files
   in.close();

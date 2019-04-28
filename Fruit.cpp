@@ -37,7 +37,7 @@ void Fruit::calculateTax(ofstream& out){
   dailySalesTax += eachSalesTax;
 
   //prints formatted tax infromation to sale file
-  out << "\t\t\tSales Tax:" << setw(31) << right << setprecision(2)
+  out << "\t\tSales Tax:" << setw(36) << right << setprecision(2) << fixed
   << eachSalesTax << endl;
 }
 
@@ -52,7 +52,7 @@ void Fruit::calculateSale(ofstream& out){
   totalFruitSales += eachSale;
 
   //prints formatted sales infromation to sales file
-  out << setw(49) << left << name << right << setprecision(4)
+  out << setw(46) << left << name << right << setprecision(2) << fixed
   << eachSale << endl;
 }
 
@@ -70,7 +70,7 @@ void Fruit::printReceipt(ofstream& out){
   calculateTax(out);
 
   //prints formatted total fruit sale infromation to sales file
-  out << "\t\t\tTotal:" << setw(35) << right << setprecision(4) <<
+  out << "\t\tTotal:" << setw(40) << right << setprecision(2) << fixed <<
   eachSale + eachSalesTax << endl;
 
   out << "\n\n" << endl;
@@ -79,6 +79,6 @@ void Fruit::printReceipt(ofstream& out){
 void Fruit::printInfo(ofstream& out){
   //prints total fruit infromation to end of sales file
   out << "Number of fruit sales for the day: " << fruitCount << endl;
-  out << "With total fruit sales of $" << setprecision(4) << totalFruitSales
-  << " for the day" << endl;
+  out << "With total fruit sales of $" << setprecision(2) << fixed<<
+  totalFruitSales << " for the day" << endl;
 }
