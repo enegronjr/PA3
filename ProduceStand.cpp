@@ -7,6 +7,7 @@
 #include "ProduceStand.h"
 #include "Fruit.h"
 #include "Vegetable.h"
+#include "LinkedList.h"
 
 ProduceStand::ProduceStand(){
   //sets stand name
@@ -17,6 +18,7 @@ ProduceStand::ProduceStand(ifstream& in, ofstream& out1, ofstream& out2){
   string temp;
   Vegetable vegi;
   Fruit fruit;
+  LinkedList list;
 
   while((!in.eof())){
     receiptNum++;
@@ -58,8 +60,9 @@ ProduceStand::ProduceStand(ifstream& in, ofstream& out1, ofstream& out2){
       //calls to setPerson to set customer data
       customer.setPerson(last, first, email, house, street, city, state, zip, month,
       day, year);
+      list.newNode(customer);
       //prints customer infromation
-      customer.printInfo(out2);
+      //customer.printInfo(out2);
     }
   }
 
@@ -67,6 +70,7 @@ ProduceStand::ProduceStand(ifstream& in, ofstream& out1, ofstream& out2){
   printInfo(out1);
   fruit.printInfo(out1);
   vegi.printInfo(out1);
+  list.printList(out2);
 
 }
 
@@ -104,4 +108,8 @@ void ProduceStand::printInfo(ofstream& out){
   out << "Total sales tax collected for the day: $" << setprecision(2) << fixed
   << dailySalesTax << endl;
 
+}
+
+string Person::getLast(){
+  return last;
 }

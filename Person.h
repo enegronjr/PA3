@@ -60,6 +60,11 @@ class Person
     *print their infromation
     */
     void printInfo(ofstream&);
+
+    string getLast();
+
+    bool operator<(Person);
+    bool operator>(Person);
 };
 
 #endif

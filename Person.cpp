@@ -60,3 +60,17 @@ void Person::printInfo(ofstream& out){
   bday.printDate(out);
   out << "\n" << endl;
 }
+
+bool Person::operator>(Person temp){
+  if(this->last > temp.getLast()){
+    return true;
+  }
+  return false;
+}
+
+bool Person::operator<(Person temp){
+  if(this->last < temp.getLast()){
+    return true;
+  }
+  return false;
+}
