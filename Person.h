@@ -49,8 +49,6 @@ class Person
     */
     void printInfo(ofstream&);
 
-    string getLast();
-
     bool operator<(Person);
     bool operator>(Person);
 };
