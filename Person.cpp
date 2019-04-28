@@ -61,6 +61,7 @@ void Person::printInfo(ofstream& out){
   out << "\n" << endl;
 }
 
+//operator to compare the last names
 bool Person::operator>(Person temp){
   if(this->last > temp.getLast()){
     return true;
@@ -68,6 +69,7 @@ bool Person::operator>(Person temp){
   return false;
 }
 
+//operator to compare the last names
 bool Person::operator<(Person temp){
   if(this->last < temp.getLast()){
     return true;
