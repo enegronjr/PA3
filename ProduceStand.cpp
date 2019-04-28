@@ -62,10 +62,8 @@ ProduceStand::ProduceStand(ifstream& in, ofstream& out1, ofstream& out2){
       day, year);
       list.newNode(customer);
       //prints customer infromation
-      //customer.printInfo(out2);
     }
   }
-
   //print all final info
   printInfo(out1);
   fruit.printInfo(out1);
