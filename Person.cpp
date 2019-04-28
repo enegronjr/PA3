@@ -50,6 +50,10 @@ bool Person::operator>(Person temp){
   return false;
 }
 
+string Person::getLast(){
+  return last;
+}
+
 //operator to compare the last names
 bool Person::operator<(Person temp){
   if(this->last < temp.getLast()){

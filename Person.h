@@ -49,7 +49,22 @@ class Person
     */
     void printInfo(ofstream&);
 
+    /*PARAMETERS: none
+     *RETURN: string representing last name
+     *This function returns last name
+     */
+    string getLast();
+
+    /*PARAMETERS: Person
+     *RETURN: bool
+     *This operator compares last names
+     */
     bool operator<(Person);
+
+    /*PARAMETERS: Person
+     *RETURN: bool
+     *This operator compares the last names
+     */
     bool operator>(Person);
 };
 

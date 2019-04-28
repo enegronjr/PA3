@@ -19,7 +19,8 @@ class Date
 
 
   public:
-    Date();
+    //default constructor with member initialization list
+    Date() : month(0), day(0), year(0){};
 
    /*PARAMETERS: int
     *RETURN:none

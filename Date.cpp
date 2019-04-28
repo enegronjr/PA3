@@ -6,13 +6,6 @@
  *****************************/
 #include "Date.h"
 
-//default constructor
-Date::Date(){
-  month = 1;
-  day = 1;
-  year = 1970;
-}
-
 void Date::setMonth(int month){
   //sets month to int passed in
   this->month = month;

@@ -90,7 +90,3 @@ void ProduceStand::printInfo(ofstream& out){
   << dailySalesTax << endl;
 
 }
-
-string Person::getLast(){
-  return last;
-}
