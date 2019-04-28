@@ -72,23 +72,6 @@ ProduceStand::ProduceStand(ifstream& in, ofstream& out1, ofstream& out2){
 
 }
 
-ProduceStand::ProduceStand(string name, double weight, double pricePerlb,
-double pricePerEach, int howMany){
-  Vegetable vegi;
-  Fruit fruit;
-
-  //if its a fruit
-  if(name == "Fruit"){
-    //read in fruit data
-    fruit = Fruit(name, weight, pricePerlb, pricePerEach, howMany);
-  }
-  //if its a Vegetable
-  else if(name == "Vegetable"){
-    //reads in Vegetable data
-    vegi = Vegetable(name, weight, pricePerlb, pricePerEach, howMany);
-  }
-}
-
 string ProduceStand::getStandName(){
   //returns the stand name
   return standName;

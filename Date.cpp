@@ -12,12 +12,6 @@ Date::Date(){
   day = 1;
   year = 1970;
 }
-//constructor
-Date::Date(int month, int day, int year){
-  this->month = month;
-  this->day = day;
-  this->year = year;
-}
 
 void Date::setMonth(int month){
   //sets month to int passed in

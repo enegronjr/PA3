@@ -25,12 +25,6 @@ class Person
     //default constructor
     Person();
 
-   /*PARAMETERS: string string int string string string int int int int
-    *constructor that sets all the data
-    */
-    Person(string, string, string, int, string, string, string, int,
-      int, int, int);
-
    /*PARAMETERS: none
     *RETURN: address type representing the address
     *This function returns the private data inside of the address class
@@ -47,12 +41,6 @@ class Person
     void setPerson(string last, string first, string email, int house,
                    string street, string city, string state, int zip,
                    int month, int day, int year);
-
-   /*PARAMETERS: none
-    *RETURN: date type variable representing the date
-    *This function returns the date
-    */
-    Date getDate();
 
    /*PARAMETERS: ofstream&
     *RETURN: none

@@ -14,20 +14,6 @@ Person::Person(){
   address.setAddress(0, "noStreet", "noCity", "noState", 0);
 }
 
-//sets variables inside of person class and calls to setter functions inside
-//of address class and date class
-Person::Person(string last, string first, string email, int house,
-string street, string city, string state, int zip, int day,
-int month, int year){
-  this->last = last;
-  this->first = first;
-  this->email = email;
-  address.setAddress(house, street, city, state, zip);
-  bday.setDay(day);
-  bday.setMonth(month);
-  bday.setYear(year);
-}
-
 //returns the address
 Address Person::getAddress(){
   return address;
@@ -45,11 +31,6 @@ int month, int day, int year){
   bday.setDay(day);
   bday.setMonth(month);
   bday.setYear(year);
-}
-
-//returns birthday of customer
-Date Person::getDate(){
-  return bday;
 }
 
 //prints all of the customer infromation

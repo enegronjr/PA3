@@ -14,15 +14,6 @@ Address::Address(){
   zip = 0;
 }
 
-//constructor
-Address::Address(int house, string street, string city, string state, int zip){
-  this->house = house;
-  this->street = street;
-  this->city = city;
-  this->state = state;
-  this->zip = zip;
-}
-
 //function to set the current address
 void Address::setAddress(int house, string street, string city,
 string state, int zip){

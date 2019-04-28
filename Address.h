@@ -21,9 +21,6 @@ class Address
 
   public:
     Address();
-    Address(int, string, string, string, int);
-
-    //setter
    /*PARAMETERS: int string string string int
     *RETURN: none
     *This function sets the address for the current customer

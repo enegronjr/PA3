@@ -20,7 +20,6 @@ class Date
 
   public:
     Date();
-    Date(int, int, int);
 
    /*PARAMETERS: int
     *RETURN:none
